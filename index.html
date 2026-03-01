@@ -1,876 +1,505 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Zhang-Wei Hong</title>
 
-  <title>Profile-Adarsh Koshiya </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <link rel="icon" href="assests/icon.png" />
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" type="text/css" href="assests/style.css">
+  <link rel="stylesheet" type="text/css" href="assests/academicons.min.css">
+  <script src="assests/fontawesome.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <script>
+    function pressBtn(p) {
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      var id_btn=["exp-btn", "pub-btn"], class_btn=["fas fa-plus-square", "fas fa-minus-square"];
+      var id_div=["exp-div", "pub-div"], style_div=["height: 300px; overflow: auto;", "height: 400px; overflow: auto;"];
 
-  <link href="assets/css/style.css" rel="stylesheet">
+      var btn = document.getElementById(id_btn[p]);
+      if(btn.className == class_btn[0]) {
+        btn.className = class_btn[1];
+        document.getElementById(id_div[p]).style = "";
+      }
+      else {
+        btn.className = class_btn[0];
+        document.getElementById(id_div[p]).style = style_div[p];
+      }
+    }
+
+    function img_hover(e, f) {
+      e.setAttribute("src", f);
+    }
+    function img_unhover(e, f) {
+      e.setAttribute("src", f);
+    }
+
+    function showTab(tabId) {
+      var tabs = ['tab-fm', 'tab-science', 'tab-fundamental'];
+      var btns = ['btn-fm', 'btn-science', 'btn-fundamental'];
+      for (var i = 0; i < tabs.length; i++) {
+        document.getElementById(tabs[i]).style.display = 'none';
+        document.getElementById(btns[i]).style.borderBottom = '2px solid transparent';
+        document.getElementById(btns[i]).style.color = '#888';
+      }
+      document.getElementById('tab-' + tabId).style.display = 'block';
+      document.getElementById('btn-' + tabId).style.borderBottom = '2px solid #ff69b4';
+      document.getElementById('btn-' + tabId).style.color = '#ff69b4';
+    }
+  </script>
 </head>
 
 <body>
+  <table style="max-width: 900px;"><tbody>
+    <tr style="padding: 0px;">
+      <td style="padding: 0px;">
 
-  <header id="header">
-    <div class="container">
+        <!--bio-->
+        <table><tbody>
+          <tr style="padding: 0px;">
+            <td style="padding: 2%; width: 70%; vertical-align: middle;">
 
-      <h1><a href="index.html">Adarsh Koshiya</a></h1>
-      <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-      <h2>Master of Science in Artificial Intelligence @ <a href="http://oth-aw.de/">Ostbayerische Technische Hochschule Amberg-Weiden</a></h2>
+              <p style="text-align: center;">
+                <name>Adarsh Koshiya</name>
+              </p>
+            
+            <p><b>Research Keywords</b>: AI safety; multi-agent systems; AI governance; (multi-agent)reinforcement learning; cooperative AI.
+            </p>
+              <p>
+                <b>Motivation</b>: I am driven by the goal of ensuring that advanced AI systems and their use in real-world settings remain safe, reliable, and aligned with human and organizational needs. To this end, I aim to develop both:
+                <ul>
+                  <li>Technically grounded solutions with strong theoretical and empirical foundations.</li>
+                  <li>Practical frameworks for deploying and monitoring AI/ML systems in security-sensitive and industrial environments.</li>
+                </ul>
+                This passion is deeply rooted in my background in computer science and cyber security, and in my experience building and monitoring real-world systems (e.g. PCI DSS–compliant monitoring and ML pipelines). I believe that making AI safe and trustworthy in production requires both rigorous methods and a clear focus on security, interpretability, and responsible use.
+              </p>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+              <p> <b>Bio</b>:
+                I am a Master's student in <a href="https://www.oth-aw.de/en/">Artificial Intelligence for Industrial Applications</a> at Ostbayerische Technische Hochschule Amberg-Weiden, Germany. I have a strong foundation in Computer Science Engineering with a specialization in Cyber Security from <a href="https://www.rru.ac.in/">Rashtriya Raksha University</a>, India. I have worked as a Software Engineer at <a href="#">Digion Software</a>, building real-time ML pipelines and PCI DSS–compliant monitoring systems, and completed a Developer Internship with <a href="https://www.salesforce.com/">Salesforce</a>. I am passionate about applying AI/ML to security, NLP, and data-driven systems.
+              </p>
 
-      <div class="social-links">
-        <a href="https://wa.me/+49 15904892207" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://www.instagram.com/a_n_koshiya/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://twitter.com/AdarshKoshiya" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/adarsh-koshiya-8a94b9208/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="https://leetcode.com/u/AK_93/" class="Leetcode"><i class="bi simple-icons--leetcode"></i></a> 
-      </div>
+              <p>
+                Outside academics, I have been a member of the <a href="#">TCA Club</a> at Rashtriya Raksha University, a volunteer with the <a href="https://nss.gov.in/">National Service Scheme (NSS)</a>, and a long-term volunteer at <a href="https://www.rotary.org/">Anurakti Foundation</a> (admitted by Rotary International), supporting education and health awareness among underprivileged children.
+              </p>
+              <p style="text-align: center;">
+                <a href="mailto:a.koshiya@oth-aw.de" target="_blank"><i class="fas fa-envelope ai-2x"></i></a>&nbsp;/&nbsp;
+                <a href="https://git.oth-aw.de/40a2" target="_blank"><i class="fab fa-github ai-2x"></i></a>&nbsp;/&nbsp;
+                <a href="files/cv.pdf" target="_blank"><i class="ai ai-cv-square ai-2x"></i></a>&nbsp;/&nbsp;
+                <!-- <a href="https://scholar.google.com/citations?user=GZkyN4cAAAAJ&hl" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>&nbsp;/&nbsp; -->
+                <a href="https://www.linkedin.com/in/adarsh-koshiya-8a94b9208/" target="_blank"><i class="fab fa-linkedin ai-2x"></i></a>
+              </p>
+            </td>
 
-    </div>
-  </header>
+            <td style="padding: 2%; width: 25%; max-width: 25%;">
+              <img src="assests/profile_photo.png" style="border-radius: 50%;" onmouseover="img_hover(this, 'assests/profile_photo.png');" onmouseout="img_unhover(this, 'assests/profile_photo.png');" />
+            </td>
+          </tr>
+        </tbody></table>
 
-  <section id="about" class="about">
 
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-        <p>KNOW ABOUT ME</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Computer Science Student</h3>
-          <p class="fst-italic">
-            To dedicate my self in a dynamic and progressive organization that draws on my knowledge, experience, skills and flexibility to adapt organization’s needs and work towards continuous growth and advancement of organization. 
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
+        <!--mentorship-->
+        <!-- <table><tbody>
+          <tr>
+            <td class="all">
+              <heading><i class="fas fa-users"></i>&nbsp;&nbsp;Mentorship</heading>
+            </td>
+          </tr>
+          <tr>
+            <td class="all">
+              <br>
+              <p>I am fortunate to work with talented students and researchers:</p>
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 Aug 2003</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <a href="https://adarsh-koshiya.github.io/portfolio-/"><span> Adarsh Koshiya</span></a></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Leetcode Profile:</strong> <a href="https://leetcode.com/u/AK_93/"><span> Adarsh</span></a></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9313535578</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Surat, Gujrat</span></li>
+                <li><a href="https://www.linkedin.com/in/iris-j-xu">Iris Xu</a> - MIT Undergraduate, former intern at MIT-IBM Watson AI Lab</li>
+                <li><a href="https://www.linkedin.com/in/harry-sillifant039/">Harry Sillifant</a> - MIT Undergraduate</li>
+                <li><a href="https://xinyunsunshine.github.io/">Sunshine Jiang</a> - MIT MEng</li>
+                <li><a href="https://www.linkedin.com/in/raina-wu-890758326/">Raina Wu</a> - MIT Undergraduate</li>
+                <li><a href="https://www.linkedin.com/in/anna-yang-32191a218/">Anna Yang</a> - MIT MEng</li>
+                <li><a href="https://calvincbzhang.github.io/">Chen Bo Calvin Zhang</a> - MIT Visiting researcher, ETH Zurish Master student, now at Scale AI</li>
+                <li><a href="https://peterng15.github.io/">Phat Nguyen</a> - UMass Amherst Undergraduate, now at Research assistant at MIT CSAIL</li>
+                <li><a href="https://www.linkedin.com/in/nishant-abhangi/">Nishant Abhangi</a> - MIT Undergraduate, now at Sunrise Futures LLC</li>
+                <li><a href="https://www.linkedin.com/in/zechu-li-66a7741b3/">Zechu Li</a> - MIT Visiting Student, Master Student at TU Darmstadt</li>
+                <li><a href="https://www.linkedin.com/in/siddhant-mukherjee-28b00b224/">Siddhant Mukherjee</a> - MIT Undergraduate, now at Citidel</li>
+                <li><a href="https://s-karnik.github.io/">Sathwik Karnik</a> - MIT Undergraduate, now Stanford Ph.D. student in Stanford</li>
+                <li><a href="https://changlee0903.github.io/">Chi-Chang Lee</a> - National Taiwan University Master, now Ph.D. student in UMD</li>
+                <li><a href="https://srinathm1359.github.io/">Srinath Mahankali</a> - MIT Undergraduate, now founding engineer at stealth startup</li>
+                <li><a href="https://echen9898.github.io/">Eric Chen</a> -  MIT Undergraduate, now PhD student in MIT</li>
               </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Technology </span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <a href="mailto:adarshkoshiya5588@gmail.com"><span>adarshkoshiya5588@gmail.com</span></a> </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-              </ul>
-            </div>
-          </div>
-          <p>
-            I am an Energetic and Budding engineer seeking Job in IT sector. I am a well organized, optimistic personality.
-            My Strength is Being positive and Hardworking and staying calm. My passion towards IT has made me stronger in Coding
-            and I am improving a lot.</p>
-            <p>
-            Thank you for visiting my page
-          </p>
+              <p><b>Prospective collaborators:</b> I am always open to collaborating on ideas related to reinforcement learning. Feel free to reach out via email.</p>
+            </td>
+          </tr>
+        </tbody></table>
+        <br><br> -->
+
+        <!--experience-->
+        <table><tbody>
+          <tr>
+            <td class="all">
+              <heading>
+                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Experience<i class="fas fa-plus-square" style="float: right;" onclick="pressBtn(0)" id="exp-btn"></i>
+              </heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <br>
+        <div style="height: 300px; overflow: auto;" id="exp-div">
+          <table><tbody>
+            <tr>
+              <td class="exp-avatar">
+                <img src="imgs/Digion.png" alt="Digion" />
+              </td>
+              <td class="exp-description">
+                <b>Software Engineer</b>
+                <span style="float: right;">Jan. 2024 - Sep. 2024</span>
+                <br>
+                <a href="https://www.digionsoftware.com/" target="_blank">Digion Software</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-avatar">
+                <img src="imgs/salesforce.png" alt="Salesforce" />
+              </td>
+              <td class="exp-description">
+                <b>Developer Intern</b>
+                <span style="float: right;">Oct. 2023 - Dec. 2023</span>
+                <br>
+                <a href="https://www.salesforce.com/" target="_blank">Salesforce</a> (Virtual Internship)
+                <br>
+                Advisor: Prof. <a href="https://rru.ac.in/people/7b2e5be0-39f1-4f70-bf62-02e19c7bf6a2" target="_blank">Vivek Joshi</a>
+              </td>
+            </tr>
+          </tbody></table>
+          <br>
+          <!-- <table><tbody>
+              <tr>
+                <td class="exp-avatar">
+                  <img src="imgs/avatar_elsa.png" />
+                </td>
+
+                <td class="exp-description">
+                  <b>Research Assistant</b>
+                  <span style="float: right;">2017 Jul. - 2020 Mar.</span>
+                  <br>
+                  <a href="https://www.facebook.com/ElsaResearchLab/" target="_blank">ELSA Lab at National Tsing Hua University</a>
+                  <br>
+                  Advisor: Prof. <a href="http://cymaxwelllee.wixsite.com/elsa" target="_blank">Chun-Yi Lee</a>
+                </td>
+              </tr>
+          </tbody></table>
+          <br>
+          <table><tbody>
+            <tr>
+              <td class="exp-avatar">
+                <img src="imgs/avatar_nthu.png" />
+              </td>
+
+              <td class="exp-description">
+                <b>Research Collaboration</b>
+                <span style="float: right;">2016 Oct. - 2017 Mar.</span>
+                <br>
+                <a href="https://aliensunmin.github.io/lab/info.html" target="_blank">Vision Science Lab at National Tsing Hua University</a>
+                <br>
+                Advisor: Prof. <a href="https://aliensunmin.github.io/" target="_blank">Min Sun</a>
+              </td>
+            </tr>
+        </tbody></table>
+        <br>
+        <table><tbody>
+          <tr>
+            <td class="exp-avatar">
+              <img src="imgs/avatar_nvidia.png" />
+            </td>
+
+            <td class="exp-description">
+              <b>Teaching Assistant</b>
+              <span style="float: right;">2017 - 2018</span>
+              <br>
+              <a href="https://www.nvidia.com/zh-tw/" target="_blank">Taiwan NVIDIA Deep Learning Institute</a>
+              <br>
+              Advisor: Prof. <a href="http://cymaxwelllee.wixsite.com/elsa" target="_blank">Chun-Yi Lee</a>
+            </td>
+          </tr>
+      </tbody></table>
+      <br>
+        <table><tbody>
+              <tr>
+                <td class="exp-avatar">
+                  <img src="imgs/avatar_mtk.png" />
+                </td>
+
+                <td class="exp-description">
+                  <b>Software Engineering Intern</b>
+                  <span style="float: right;">Jul. 2016 - Nov. 2016</span>
+                  <br>
+                  <a href="https://www.mediatek.com/" target="_blank">Mediatek</a>
+                  <br>
+                  Advisor: <a href="https://www.linkedin.com/in/antliu/?originalSubdomain=tw/" target="_blank">Anthony Liu</a>
+                </td>
+              </tr>
+          </tbody></table>
+          <br>
+          <table><tbody>
+              <tr>
+                <td class="exp-avatar">
+                  <img src="imgs/avatar_itri.png" />
+                </td>
+
+                <td class="exp-description">
+                  <b>Contract Software Engineer</b>
+                  <span style="float: right;">Oct. 2015 - Dec. 2015</span>
+                  <br>
+                  <a href="https://www.itri.org.tw/english/" target="_blank">Industrial Technology Research Institute (ITRI) </a>
+                </td>
+              </tr>
+          </tbody></table> -->
         </div>
-      </div>
+        <br><br>
 
-    </div>
+    <!--projects-->
+        <table><tbody>
+          <tr>
+            <td class="all">
+              <heading>
+                <i class="fas fa-folder-open"></i>&nbsp;&nbsp;Projects<i class="fas fa-plus-square" style="float: right;" onclick="pressBtn(1)" id="pub-btn"></i>
+              </heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <br>
+          <div style="height: 400px; overflow: auto;" id="pub-div">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    
+    <!--Quantum Circuit Image-to-Text Dataset | NLP Project-->
+    <tr>
+      <td class="pub-avatar">
+        <span class="highlight" style="display:block;padding:6px;border-radius:6px;">
+          <img src='imgs/NLP.png' alt="NLP Project">
+        </span>
+      </td>
+      <td class="pub-description">
+        <span class="highlight" style="display:block;padding:6px;border-radius:6px;">
+        <span class="papertitle">An Image-to-Text Dataset for Quantum Circuit
+          Diagrams</span>
+        <br>
+        <strong>Adarsh Koshiya</strong>
+        <br>
+        <em>Natural Language Processing Project (WiSe2025/26)</em>
+        <br>
+        <a href="https://git.oth-aw.de/40a2/nlp">Code</a>
+        /
+        <a href="data/RLC_2024_Poster.pdf">Poster</a>
+        / 
+        <a href=" https://docs.google.com/presentation/d/1YnakiI81uulW6TWuJkysh-amYOHGFHylQizVeYoY1X0/edit?usp=sharing">Presentation</a>
+        /
+        <a href="https://arxiv.org/abs/2407.03995">arXiv</a>
+        <p></p>
+        <p>
+          Automated Python pipeline extracting quantum circuit images from arXiv with structured metadata. Multi-stage filtering with LaTeX context analysis and OpenCV; NLP techniques (TF-IDF, sentence segmentation) for text-figure alignment—40% improvement in completeness.
+        </p>
+        </span>
+      </td>
+    </tr>
 
-    <!-- <div class="counts container">
+	<!--RLC 2024-->
+    <tr>
+      <td class="pub-avatar">
+        <img src='imgs/EMI.png'>
+      </td>
+      <td class="pub-description">
+        <a href="#">
+          <span class="papertitle">Sensor Fusion for IMU/BLE Indoor Localization</span>
+        </a>
+        <br>
+        <strong>Changling Li</strong>,
+        Zhang-Wei Hong,
+        Pulkit Agrawal,
+        Divyansh Garg,
+        Joni Pajarinen
+        <br>
+        <em> Embedded Intelligence (SoSe2024/25)</em>
+        <br>
+        <a href="https://git.oth-aw.de/6154/emi">Code</a>
+        /
+        <a href="data/RLC_2024_Poster.pdf">Poster</a>
+        / 
+        <a href=" https://docs.google.com/presentation/d/1YnakiI81uulW6TWuJkysh-amYOHGFHylQizVeYoY1X0/edit?usp=sharing">Presentation</a>
+        /
+        <a href="https://arxiv.org/abs/2407.03995">arXiv</a>
+        <p></p>
+        <p>
+        Developed a prototype indoor localization system in Python by fusing IMU (step/heading) and BLE (RSSI) sensor data. Built the core Particle Filter algorithm using NumPy and SciPy to process motion and measurement models. Collected data from an Arduino-based rig and created a real-time trajectory visualization using Pygame.
+        </p>
+      </td>
+    </tr>
 
-      <div class="row">
+    <!--IoT-J 2024-->
+    <tr>
+      <td class="pub-avatar">
+        <img src='imgs/stock.png'>
+      </td>
+      <td class="pub-description">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10777009">
+          <span class="papertitle">Stock Data Analysis and Prediction</span>
+        </a>
+        <br>
+        <strong>Changling Li</strong>,
+        Ying Li
+        <br>
+        <em>Internet of Things Journal (<strong>IoT-J</strong>)</em>, 2024
+        <br>
+        <a href="https://github.com/XavierChanglingLi/MARL_for_MODN">Code</a>
+        /
+        <a href="https://www.researchgate.net/publication/386447478_Scaling_up_Energy-Aware_Multi-Agent_Reinforcement_Learning_for_Mission-Oriented_Drone_Networks_With_Individual_Reward">arXiv</a>
+        <p></p>
+        <p>
+          Analyzed and visualized Apple (AAPL) stock price data using Python in a Google Colab environment. We performed data manipulation and built advanced visualizations with Pandas, NumPy, Matplotlib, and Seaborn, and developed time-series forecasting models (ARMA, ARIMA) using the statsmodels library.
+        </p>
+      </td>
+    </tr>
+    
+    <!--ICCCN 2022-->
+    <tr>
+      <td class="pub-avatar">
+        <img src='image/ICCCN_2022.png'>
+      </td>
+      <td class="pub-description">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9868945">
+          <span class="papertitle">Energy-Aware Multi-Agent Reinforcement Learning for Collaborative Execution in Mission-Oriented Drone Networks</span>
+        </a>
+        <br>
+				Ying Li,
+				<strong>Changling Li</strong>,
+				Jiyao Chen,
+				Christine Roinou		
+        <br>
+        <em>International Conference on Computer Communications and Networks (<strong>ICCCN</strong>)</em>, 2022
+        <br>
+        <a href="https://github.com/XavierChanglingLi/MARL_for_MODN">Code</a>
+        /
+        <a href="https://arxiv.org/abs/2410.22578">arXiv</a>
+        <p></p>
+        <p>
+        We create a multi-agent reinforcement learning framework for mission-oriented drone networks to enable energy-efficient task planning and execution.
+        </p>
+      </td>
+    </tr>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
-            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Role Model</p>
+
+          </tbody></table>
           </div>
-        </div>
+        <br><br>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-        </div>
+        <!--honors-->
+              <table><tbody>
+                  <tr>
+                    <td class="all">
+                      <heading><i class="fas fa-award"></i>&nbsp;&nbsp;Honors &amp; Scholarships</heading>
+                    </td>
+                  </tr>
+                  <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+                    <tr>
+                      <td style="padding:6px 20px 12px 20px;">
+                        <!-- <p><b>Honors</b>: <a href="https://www.pbk.org/">Phi Beta Kappa</a>, <a href="https://students.aip.org/sigma-pi-sigma">Sigma Pi Sigma</a>, <a href="https://www.davisuwcscholars.org/">UWC Davis Scholar</a>, Magna Cum Laude (top 5%), Dean’s List, Distinction in both majors</p> -->
+                        <p><a href="https://ffe.org">Foundation For Excellence (FFE) Fellowship</a>, <a href="https://mysy.gujarat.gov.in/frm_stu_gr.aspx"> MYSY </a>
+                      </td>
+                    </tr>
+              </tbody></table>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-headset"></i>
-            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Years of Happy Life</p>
-          </div>
-        </div>
+        <!--Courses-->
+        <table><tbody>
+        <tr>
+          <td class="all">
+            <heading><i class="fas fa-book"></i>&nbsp;&nbsp;Courses</heading>
+          </td>
+        </tr>
+        <tr>
+          <td class="all">
+            <br>
+            <a href="https://www.coursera.org/account/accomplishments/verify/QQTPHQMB4C7V" target="_blank">Smart Analytics, Machine Learning, and AI on Google Cloud</a>, Google Cloud
+            <br>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/5H64HQ4BC27C" target="_blank">Python 3 Programming, Data Collection and Processing with Python</a>, University of Michigan
+            <br>
+            <a href="https://www.coursera.org/account/accomplishments/verify/K9VE4YCDDRRF" target="_blank">Data Analysis with R Programming, Google Cloud Big Data and ML Fundamentals</a>, Google, Coursera
+            <br>
+            <a href="https://www.coursera.org/account/accomplishments/verify/DSPVH88WLDUK" target="_blank">Computer Networks and Network Security</a>, IBM, Coursera
+            <br>
+            <a href="https://www.credly.com/badges/c0811f71-d0a1-4a4b-96a2-428da15d2c71/" target="_blank">IBM Cybersecurity Analyst Professional Certificate</a>, IBM
+          </td>
+        </tr>
+        
+        </tbody></table>
+        <br><br>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-award"></i>
-            <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Awards</p>
-          </div>
-        </div>
+        <!-- talks -->
+        <!-- <table><tbody>
+          <tr>
+            <td class="all">
+              <heading><i class="fas fa-microphone"></i>&nbsp;&nbsp;Invited Talks</heading>
+            </td>
+          </tr>
+          <tr>
+            <td class="all">
+              <br>
+              <a href="https://www.zew.de" target="_blank">ZEW Workshop on Red Teaming Generative AI Models</a>
+              <br>
+              <a href="https://www.microsoft.com/en-us/research/project/project-turing/" target="_blank">Microsoft Turing Team</a>
+              <br>
+              <a href="https://www.macro-eyes.com/" target="_blank">Macro Eyes</a>
+              <br>
+              <a href="https://www.pair.toronto.edu/robotics-rg/" target="_blank">Toronto AI in Robotics Seminar</a>, University of Toronto
+            </td>
+          </tr>
+          </tbody></table>
+          <br><br> -->
 
-      </div>
+        <!--teaching-->
+        <!-- <table><tbody>
+            <tr>
+              <td class="all">
+                <heading><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Teaching</heading>
+              </td>
+            </tr>
+            <tr>
+              <td class="all">
+                <br>
+                <a href="https://pulkitag.github.io/6.484/" target="_blank">6.484 Computational Sensorimotor Learning</a>, MIT
+                <span style="float: right;">Spring 2022</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="all">
+                <br>
+                <a href="https://pulkitag.github.io/rlbootcamp-iap/" target="_blank">6.S090 Deep Learning for Control</a>, MIT
+                <span style="float: right;">Spring 2021</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="all">
+                <br>
+                <a href="https://www.nvidia.com/zh-tw/deep-learning-ai/education/" target="_blank">Deep Learning Institute</a>, NVIDIA Taiwan
+                <span style="float: right;">Spring 2018</span>
+              </td>
+            </tr>
+        </tbody></table>
+        <br><br> -->
 
-    </div> -->
+       
+      <br><br>
 
-    <div class="skills container">
-
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="row skills-content">
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">HTML/CSS<i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">C/C++<i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Python<i class="val">85%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">PHP <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">ELK Stack <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Photoshop <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line" style="color: #ffbb2c;"></i>
-            <h3>Operating Systems</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>Computer Networks</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>Cloud Computing</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>Machine Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>Coding</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-            <h3>Web Development</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>Midela Teren</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-            <h3>Traveling</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>Penetration Testing</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>Music</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-base-station-line" style="color: #ff5828;"></i>
-            <h3>Networking</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3>Cyber Security</h3>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="testimonials container">
-
-      <div class="section-title">
-        <h2>FAVOURITE QUOTES</h2>
-      </div>
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Creativity is just connecting things...The broader one's understanding of the human experience, the better design we will have
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+        <!--boreder-->
+        <table><tbody>
+          <tr>
+            <td style="padding: 0px">
+              <br>
+              <p style="text-align: center;">
+                template from <a href="https://jonbarron.info" target="_blank">jonbarron</a>
               </p>
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Steve Jobs</h3>
-              <h4>Former CEO &amp; Creator of Apple</h4>
-            </div>
-          </div>
+            </td>
+          </tr>
+        </tbody></table>
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Computers are incredibly fast, accurate, and stupid. Human beings are incredibly slow, inaccurate, and brilliant. Together they are powerful beyond imagination.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Albert Einstein</h3>
-              <h4>Physicist</h4>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Computers are good at following instructions, but not at reading your mind.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Donald Knuth </h3>
-              <h4>The “father of the analysis of algorithms”</h4>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Most of the good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Linus Torvalds </h3>
-              <h4>Software Engineer &amp; Inventor of the Linux operating system</h4>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                A good programmer is someone who always looks both ways before crossing a one-way street.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>Doug Linder</h3>
-              <h4>Computer Scientist</h4>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="owl-carousel testimonials-carousel">
-      </div>
-    </div>
-  </section>
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-7">
-          <h3 class="resume-title">summary</h3>
-          <div class="resume-item pb-0">
-            <h4>Adarsh Koshiya</h4>
-            <p><em>Young and Hardworking Student who wishes to enjoy Life with sincere commitments and passion</em></p>
-            <p>
-            <ul>
-              <li>Amberg, Bavaria, DE</li>
-              <li>+49 1590 4892207</li>
-              <li>adarshde7439@gmail.com</li>
-            </ul>
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <h3 class="resume-title">Work Experience</h3>
-          <div class="resume-item">
-            <h4>Digion Software</h4>
-            <h5>15/01/2024 - 30/09/2024</h5>
-            <p><em>Software Engineer</em></p>
-            <!--<p>Currently Pursuing 2nd Year at Rashtriya Raksha University </p>-->
-          </div>
-          <div class="resume-item">
-            <h4>Salesforce Virtual Internship</h4>
-            <h5>13/10/2023 - 01/12/2023</h5>
-            <p><em>Devloper Intern </em></p>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>M.Sc. – Artificial Intelligence for Industrial Application</h4>
-            <h5>2024 - 2026</h5>
-            <p><em>Ostbayerische Technische Hochschule Amberg-Weiden, Amberg, DE</em></p>
-           <!-- <p>Currently Pursuing 1st Year @ OTH-aw </p> -->
-          </div>
-          <div class="resume-item">
-            <h4>B.Tech – Computer science and Engineering</h4>
-            <h5>2020 - 2024</h5>
-            <p><em>Rashtriya Raksha University, Gujarat, IN</em></p>
-            <p>Completed Bachelors with Distinction @ Rashtriya Raksha University </p>
-          </div>
-          <div class="resume-item">
-            <h4>Higher Secondary School</h4>
-            <h5>2018-2020</h5>
-            <p><em>Kaushal Vidhyabhavan, Gujarat, IN</em></p>
-            <p>Completed Higher Secondary schooling with 86.05 grade @ Kaushal Vidhyabhavan, Surat</p>
-          </div>
-          <div class="resume-item">
-            <h4>Primary School</h4>
-            <h5>2006-2018</h5>
-            <p><em>Sardar Patel Vidhyabhavan, Gujarat, IN
-            </em></p>
-            <p>Completed Secondary Schooling with Final grade:98.83 @ Sardar Patel Vidhyabhavan, Surat</p>
-          </div>
-        </div>
-
-        <!--<div class="col-lg-6"> -->
-          <h3 class="resume-title">Positions Of Responsibility</h3>
-         </div>
-          <div class="resume-item">
-            <h4>Volunteer at NATIONAL STAKEHOLDERS MEET</h4>
-            <p><em>Small Arms and The Indian Ecosystem</em></p>
-          </div>  
-           <div class="resume-item">
-            <h4>Active Member of TCA Club of Rashtriya Raksha University</h4>
-            <p><em>Rashtriya Raksha University</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Active Member of NSS - NATIONAL Service Scheme</h4>
-            <p><em>Rashtriya Raksha University</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Led a 6‐member technical team</h4>
-            <p><em>Conceptualized a completely new online courseware for cyber security aspirants and police force</em></p>
-          </div>
-
-      <div class="col-lg-7">
-        <h3 class="resume-title">Certificates</h3>
-          <div class="resume-item">
-            <h4>Host Institution: NPTEL</h4>
-          <p>
-            <ul>
-              <li>Cloud Computing - Indian Institute of Technology Kharagpur</li>
-            </ul>
-            </p>
-          </div>
-        <div class="resume-item">
-          <h4>Host Institution: University of Michigan </h4>
-          <p>
-          <ul>
-            <li>Python 3 Programming</li>
-            </ul>
-          </p>
-        </div>
-        <div class="resume-item">
-          <h4>Host Institution: IBM </h4>
-          <p>
-          <ul>
-            <li>Front - End Web Development</li>
-            </ul>
-          </p>
-        </div>
-        <div class="resume-item">
-          <h4>Host Institution: Udemy </h4>
-          <p>
-          <ul>
-            <li>Creating a Responsive Web Design</li>
-            </ul>
-          </p>
-        </div>
-          <div class="resume-item">
-            <h4>Host Institution: Google Cloud</h4>
-            <p>
-            <ul>
-              <li>Google Cloud Big Data and Machine Learning Fundamentals </li>
-              </ul>
-            </p>
-          </div>
-        <div class="resume-item">
-          <h4>Host Institutuion: Google </h4>
-          <p>
-          <ul>
-            <li>Data Analysis with R Programming</li>
-            </ul>
-          </p>
-        </div>
-          <div class="resume-item">
-            <h4>Host Institution: IBM</h4>
-          <p>
-            <ul>
-              <li>IBM cyber security analyst</li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Host Institution: IBM</h4>
-            <p>
-            <ul>
-              <li>Penetration Testing, Incident Response and Forensics</li>
-              </ul>
-            </p>
-          </div>
-        <div class="resume-item">
-            <h4>Host Institution: Indian Army</h4>
-          <p>
-            <ul>
-              <li>Indian Army Cyber Security Hackathon</li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>To be Available in future</p>
-      </div>
-    <!--
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>My Services</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Divera don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  -->
-  </section>
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
-          </ul>
-        </div>
-      </div>
-    <!--
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  -->
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>92224 Amberg, Bavaria, DE</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://wa.me/+919313535578" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-              <a href="https://www.instagram.com/a_n_koshiya/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://twitter.com/AdarshKoshiya" class="twitter"><i class="bi bi-twitter"></i></a>
-              
-              <a href="https://www.linkedin.com/in/adarsh-koshiya-8a94b9208/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <a href="mailto:adarshde7439@gmail.com">adarshde7439@gmail.com</a>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <a href="tel:+4915904892207">1590 4892207</a>
-          </div>
-        </div>
-      </div>
-
-      <form action="mailto:adarshkoshiya5588@gmail.com" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
-
-    </div>
-  </section>
-
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>A.K.</span></strong>
-      </div>
-      <div class="credits">
-        Designed by <a>Adarsh Koshiya</a> <!-- (ᗩ./ᗕ.) -->
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
+      </td>
+    </tr>
+  </table>
 </body>
 
 </html>
