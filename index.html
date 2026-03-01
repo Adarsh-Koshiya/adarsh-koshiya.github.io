@@ -1,66 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-  <title>Zhang-Wei Hong</title>
+    <title>Changling Li</title>
 
-  <link rel="icon" href="assests/icon.png" />
-
-  <link rel="stylesheet" type="text/css" href="assests/style.css">
-  <link rel="stylesheet" type="text/css" href="assests/academicons.min.css">
-  <script src="assests/fontawesome.js"></script>
-
-  <script>
-    function pressBtn(p) {
-
-      var id_btn=["exp-btn", "pub-btn"], class_btn=["fas fa-plus-square", "fas fa-minus-square"];
-      var id_div=["exp-div", "pub-div"], style_div=["height: 300px; overflow: auto;", "height: 400px; overflow: auto;"];
-
-      var btn = document.getElementById(id_btn[p]);
-      if(btn.className == class_btn[0]) {
-        btn.className = class_btn[1];
-        document.getElementById(id_div[p]).style = "";
+    <meta name="author" content="Changling Li">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_blank">
+    <link rel="shortcut icon" href="image/favicon/icon.JPG" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+    <script>
+      function setVisiblePublications(n) {
+        var container = document.getElementById('pub-div');
+        if (!container) return;
+        var table = container.querySelector('table');
+        if (!table) return;
+        var rows = table.querySelectorAll('tbody > tr');
+        if (!rows.length) return;
+        var idx = Math.min(n, rows.length) - 1;
+        var first = rows[0];
+        var last = rows[idx];
+        var top = first.offsetTop;
+        var bottom = last.offsetTop + last.offsetHeight;
+        var padding = 8;
+        container.style.height = (bottom - top + padding) + 'px';
+        container.style.overflow = 'auto';
       }
-      else {
-        btn.className = class_btn[0];
-        document.getElementById(id_div[p]).style = style_div[p];
+
+      function pressBtn(p) {
+        if (p === 0) {
+          // Experience section
+          var btn = document.getElementById('exp-btn');
+          var div = document.getElementById('exp-div');
+          if (!btn || !div) return;
+          if (btn.className === 'fa-solid fa-plus-square') {
+            btn.className = 'fa-solid fa-minus-square';
+            div.style.height = '';
+            div.style.overflow = '';
+          } else {
+            btn.className = 'fa-solid fa-plus-square';
+            div.style.height = '300px';
+            div.style.overflow = 'auto';
+          }
+        } else {
+          // Projects section
+          var btn = document.getElementById('pub-btn');
+          var div = document.getElementById('pub-div');
+          if (!btn || !div) return;
+          if (btn.className === 'fa-solid fa-plus-square') {
+            btn.className = 'fa-solid fa-minus-square';
+            div.style = '';
+          } else {
+            btn.className = 'fa-solid fa-plus-square';
+            setVisiblePublications(3);
+          }
+        }
       }
-    }
 
-    function img_hover(e, f) {
-      e.setAttribute("src", f);
-    }
-    function img_unhover(e, f) {
-      e.setAttribute("src", f);
-    }
+      window.addEventListener('load', function() {
+        setVisiblePublications(3);
+      });
+    </script>
+    
+  </head>
 
-    function showTab(tabId) {
-      var tabs = ['tab-fm', 'tab-science', 'tab-fundamental'];
-      var btns = ['btn-fm', 'btn-science', 'btn-fundamental'];
-      for (var i = 0; i < tabs.length; i++) {
-        document.getElementById(tabs[i]).style.display = 'none';
-        document.getElementById(btns[i]).style.borderBottom = '2px solid transparent';
-        document.getElementById(btns[i]).style.color = '#888';
-      }
-      document.getElementById('tab-' + tabId).style.display = 'block';
-      document.getElementById('btn-' + tabId).style.borderBottom = '2px solid #ff69b4';
-      document.getElementById('btn-' + tabId).style.color = '#ff69b4';
-    }
-  </script>
-</head>
-
-<body>
-  <table style="max-width: 900px;"><tbody>
-    <tr style="padding: 0px;">
-      <td style="padding: 0px;">
-
-        <!--bio-->
-        <table><tbody>
-          <tr style="padding: 0px;">
-            <td style="padding: 2%; width: 70%; vertical-align: middle;">
-
-              <p style="text-align: center;">
-                <name>Adarsh Koshiya</name>
+  <body>
+    <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                Adarsh Koshiya
               </p>
             
             <p><b>Research Keywords</b>: AI safety; multi-agent systems; AI governance; (multi-agent)reinforcement learning; cooperative AI.
@@ -81,67 +99,31 @@
               <p>
                 Outside academics, I have been a member of the <a href="#">TCA Club</a> at Rashtriya Raksha University, a volunteer with the <a href="https://nss.gov.in/">National Service Scheme (NSS)</a>, and a long-term volunteer at <a href="https://www.rotary.org/">Anurakti Foundation</a> (admitted by Rotary International), supporting education and health awareness among underprivileged children.
               </p>
-              <p style="text-align: center;">
-                <a href="mailto:a.koshiya@oth-aw.de" target="_blank"><i class="fas fa-envelope ai-2x"></i></a>&nbsp;/&nbsp;
-                <a href="https://git.oth-aw.de/40a2" target="_blank"><i class="fab fa-github ai-2x"></i></a>&nbsp;/&nbsp;
-                <a href="files/cv.pdf" target="_blank"><i class="ai ai-cv-square ai-2x"></i></a>&nbsp;/&nbsp;
-                <!-- <a href="https://scholar.google.com/citations?user=GZkyN4cAAAAJ&hl" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>&nbsp;/&nbsp; -->
-                <a href="https://www.linkedin.com/in/adarsh-koshiya-8a94b9208/" target="_blank"><i class="fab fa-linkedin ai-2x"></i></a>
+              <p style="text-align:center">
+                <a href="mailto:a.koshiya@oth-aw.de" aria-label="Email" title="Email"><i class="fa-solid fa-envelope fa-2x"></i></a> &nbsp;/&nbsp;
+                <a href="files/cv.pdf" aria-label="CV" title="CV"><i class="ai ai-cv-square ai-2x"></i></a> &nbsp;/&nbsp;
+                <a href="https://git.oth-aw.de/40a2" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github fa-2x"></i></a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/adarsh-koshiya-8a94b9208/" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin fa-2x"></i></a>
               </p>
             </td>
 
-            <td style="padding: 2%; width: 25%; max-width: 25%;">
-              <img src="assests/profile_photo.png" style="border-radius: 50%;" onmouseover="img_hover(this, 'assests/profile_photo.png');" onmouseout="img_unhover(this, 'assests/profile_photo.png');" />
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img src="imgs/profile_photo.png" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" />
             </td>
           </tr>
         </tbody></table>
 
-
-        <!--mentorship-->
-        <!-- <table><tbody>
-          <tr>
-            <td class="all">
-              <heading><i class="fas fa-users"></i>&nbsp;&nbsp;Mentorship</heading>
-            </td>
-          </tr>
-          <tr>
-            <td class="all">
-              <br>
-              <p>I am fortunate to work with talented students and researchers:</p>
-              <ul>
-                <li><a href="https://www.linkedin.com/in/iris-j-xu">Iris Xu</a> - MIT Undergraduate, former intern at MIT-IBM Watson AI Lab</li>
-                <li><a href="https://www.linkedin.com/in/harry-sillifant039/">Harry Sillifant</a> - MIT Undergraduate</li>
-                <li><a href="https://xinyunsunshine.github.io/">Sunshine Jiang</a> - MIT MEng</li>
-                <li><a href="https://www.linkedin.com/in/raina-wu-890758326/">Raina Wu</a> - MIT Undergraduate</li>
-                <li><a href="https://www.linkedin.com/in/anna-yang-32191a218/">Anna Yang</a> - MIT MEng</li>
-                <li><a href="https://calvincbzhang.github.io/">Chen Bo Calvin Zhang</a> - MIT Visiting researcher, ETH Zurish Master student, now at Scale AI</li>
-                <li><a href="https://peterng15.github.io/">Phat Nguyen</a> - UMass Amherst Undergraduate, now at Research assistant at MIT CSAIL</li>
-                <li><a href="https://www.linkedin.com/in/nishant-abhangi/">Nishant Abhangi</a> - MIT Undergraduate, now at Sunrise Futures LLC</li>
-                <li><a href="https://www.linkedin.com/in/zechu-li-66a7741b3/">Zechu Li</a> - MIT Visiting Student, Master Student at TU Darmstadt</li>
-                <li><a href="https://www.linkedin.com/in/siddhant-mukherjee-28b00b224/">Siddhant Mukherjee</a> - MIT Undergraduate, now at Citidel</li>
-                <li><a href="https://s-karnik.github.io/">Sathwik Karnik</a> - MIT Undergraduate, now Stanford Ph.D. student in Stanford</li>
-                <li><a href="https://changlee0903.github.io/">Chi-Chang Lee</a> - National Taiwan University Master, now Ph.D. student in UMD</li>
-                <li><a href="https://srinathm1359.github.io/">Srinath Mahankali</a> - MIT Undergraduate, now founding engineer at stealth startup</li>
-                <li><a href="https://echen9898.github.io/">Eric Chen</a> -  MIT Undergraduate, now PhD student in MIT</li>
-              </ul>
-              <p><b>Prospective collaborators:</b> I am always open to collaborating on ideas related to reinforcement learning. Feel free to reach out via email.</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <br><br> -->
 
         <!--experience-->
-        <table><tbody>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
-            <td class="all">
-              <heading>
-                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Experience<i class="fas fa-plus-square" style="float: right;" onclick="pressBtn(0)" id="exp-btn"></i>
-              </heading>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <h2><i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Experience<i class="fa-solid fa-minus-square" style="float: right;" onclick="pressBtn(0)" id="exp-btn"></i></h2>
             </td>
           </tr>
         </tbody></table>
-        <br>
-        <div style="height: 300px; overflow: auto;" id="exp-div">
+        <div id="exp-div">
+        
           <table><tbody>
             <tr>
               <td class="exp-avatar">
@@ -168,103 +150,20 @@
               </td>
             </tr>
           </tbody></table>
-          <br>
-          <!-- <table><tbody>
-              <tr>
-                <td class="exp-avatar">
-                  <img src="imgs/avatar_elsa.png" />
-                </td>
-
-                <td class="exp-description">
-                  <b>Research Assistant</b>
-                  <span style="float: right;">2017 Jul. - 2020 Mar.</span>
-                  <br>
-                  <a href="https://www.facebook.com/ElsaResearchLab/" target="_blank">ELSA Lab at National Tsing Hua University</a>
-                  <br>
-                  Advisor: Prof. <a href="http://cymaxwelllee.wixsite.com/elsa" target="_blank">Chun-Yi Lee</a>
-                </td>
-              </tr>
-          </tbody></table>
-          <br>
-          <table><tbody>
-            <tr>
-              <td class="exp-avatar">
-                <img src="imgs/avatar_nthu.png" />
-              </td>
-
-              <td class="exp-description">
-                <b>Research Collaboration</b>
-                <span style="float: right;">2016 Oct. - 2017 Mar.</span>
-                <br>
-                <a href="https://aliensunmin.github.io/lab/info.html" target="_blank">Vision Science Lab at National Tsing Hua University</a>
-                <br>
-                Advisor: Prof. <a href="https://aliensunmin.github.io/" target="_blank">Min Sun</a>
-              </td>
-            </tr>
-        </tbody></table>
-        <br>
-        <table><tbody>
-          <tr>
-            <td class="exp-avatar">
-              <img src="imgs/avatar_nvidia.png" />
-            </td>
-
-            <td class="exp-description">
-              <b>Teaching Assistant</b>
-              <span style="float: right;">2017 - 2018</span>
-              <br>
-              <a href="https://www.nvidia.com/zh-tw/" target="_blank">Taiwan NVIDIA Deep Learning Institute</a>
-              <br>
-              Advisor: Prof. <a href="http://cymaxwelllee.wixsite.com/elsa" target="_blank">Chun-Yi Lee</a>
-            </td>
-          </tr>
-      </tbody></table>
-      <br>
-        <table><tbody>
-              <tr>
-                <td class="exp-avatar">
-                  <img src="imgs/avatar_mtk.png" />
-                </td>
-
-                <td class="exp-description">
-                  <b>Software Engineering Intern</b>
-                  <span style="float: right;">Jul. 2016 - Nov. 2016</span>
-                  <br>
-                  <a href="https://www.mediatek.com/" target="_blank">Mediatek</a>
-                  <br>
-                  Advisor: <a href="https://www.linkedin.com/in/antliu/?originalSubdomain=tw/" target="_blank">Anthony Liu</a>
-                </td>
-              </tr>
-          </tbody></table>
-          <br>
-          <table><tbody>
-              <tr>
-                <td class="exp-avatar">
-                  <img src="imgs/avatar_itri.png" />
-                </td>
-
-                <td class="exp-description">
-                  <b>Contract Software Engineer</b>
-                  <span style="float: right;">Oct. 2015 - Dec. 2015</span>
-                  <br>
-                  <a href="https://www.itri.org.tw/english/" target="_blank">Industrial Technology Research Institute (ITRI) </a>
-                </td>
-              </tr>
-          </tbody></table> -->
         </div>
         <br><br>
 
     <!--projects-->
-        <table><tbody>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
-            <td class="all">
-              <heading>
-                <i class="fas fa-folder-open"></i>&nbsp;&nbsp;Projects<i class="fas fa-plus-square" style="float: right;" onclick="pressBtn(1)" id="pub-btn"></i>
-              </heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <br>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <h2><i class="fa-regular fa-folder-open"></i>&nbsp;&nbsp;Projects<i class="fa-solid fa-plus-square" style="float: right;" onclick="pressBtn(1)" id="pub-btn"></i></h2>
+                <!-- <p>
+                  I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
+                </p> -->
+              </td>
+            </tr>
+          </tbody></table>
           <div style="height: 400px; overflow: auto;" id="pub-div">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     
@@ -359,7 +258,7 @@
     <!--ICCCN 2022-->
     <tr>
       <td class="pub-avatar">
-        <img src='image/ICCCN_2022.png'>
+        <img src='imgs/ICCCN_2022.png'>
       </td>
       <td class="pub-description">
         <a href="https://ieeexplore.ieee.org/abstract/document/9868945">
@@ -386,34 +285,34 @@
 
           </tbody></table>
           </div>
-        <br><br>
 
         <!--honors-->
-              <table><tbody>
-                  <tr>
-                    <td class="all">
-                      <heading><i class="fas fa-award"></i>&nbsp;&nbsp;Honors &amp; Scholarships</heading>
-                    </td>
-                  </tr>
-                  <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-                    <tr>
-                      <td style="padding:6px 20px 12px 20px;">
-                        <!-- <p><b>Honors</b>: <a href="https://www.pbk.org/">Phi Beta Kappa</a>, <a href="https://students.aip.org/sigma-pi-sigma">Sigma Pi Sigma</a>, <a href="https://www.davisuwcscholars.org/">UWC Davis Scholar</a>, Magna Cum Laude (top 5%), Dean’s List, Distinction in both majors</p> -->
-                        <p><a href="https://ffe.org">Foundation For Excellence (FFE) Fellowship</a>, <a href="https://mysy.gujarat.gov.in/frm_stu_gr.aspx"> MYSY </a>
+                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td style="padding:12px 20px 6px 20px;">
+                <h2 style="margin-top:14px;"><i class="fa-solid fa-award"></i>&nbsp;&nbsp;Honors &amp; Scholarships</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+            <tr>
+              <td style="padding:6px 20px 12px 20px;">
+                        <p><a href="https://ffe.org">Foundation For Excellence (FFE) Fellowship</a>, <a href="https://mysy.gujarat.gov.in/frm_stu_gr.aspx">MYSY</a></p>
                       </td>
                     </tr>
               </tbody></table>
 
         <!--Courses-->
-        <table><tbody>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
         <tr>
-          <td class="all">
-            <heading><i class="fas fa-book"></i>&nbsp;&nbsp;Courses</heading>
+          <td>
+            <h2><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Courses</h2>
           </td>
         </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
         <tr>
-          <td class="all">
-            <br>
+          <td style="padding:6px 20px 12px 20px;">
             <a href="https://www.coursera.org/account/accomplishments/verify/QQTPHQMB4C7V" target="_blank">Smart Analytics, Machine Learning, and AI on Google Cloud</a>, Google Cloud
             <br>
             <a href="https://www.coursera.org/account/accomplishments/specialization/5H64HQ4BC27C" target="_blank">Python 3 Programming, Data Collection and Processing with Python</a>, University of Michigan
@@ -429,77 +328,21 @@
         </tbody></table>
         <br><br>
 
-        <!-- talks -->
-        <!-- <table><tbody>
-          <tr>
-            <td class="all">
-              <heading><i class="fas fa-microphone"></i>&nbsp;&nbsp;Invited Talks</heading>
-            </td>
-          </tr>
-          <tr>
-            <td class="all">
-              <br>
-              <a href="https://www.zew.de" target="_blank">ZEW Workshop on Red Teaming Generative AI Models</a>
-              <br>
-              <a href="https://www.microsoft.com/en-us/research/project/project-turing/" target="_blank">Microsoft Turing Team</a>
-              <br>
-              <a href="https://www.macro-eyes.com/" target="_blank">Macro Eyes</a>
-              <br>
-              <a href="https://www.pair.toronto.edu/robotics-rg/" target="_blank">Toronto AI in Robotics Seminar</a>, University of Toronto
-            </td>
-          </tr>
+            
+            
           </tbody></table>
-          <br><br> -->
-
-        <!--teaching-->
-        <!-- <table><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td class="all">
-                <heading><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Teaching</heading>
-              </td>
-            </tr>
-            <tr>
-              <td class="all">
+              <td style="padding:0px">
                 <br>
-                <a href="https://pulkitag.github.io/6.484/" target="_blank">6.484 Computational Sensorimotor Learning</a>, MIT
-                <span style="float: right;">Spring 2022</span>
+                <p style="text-align:center;font-size:small;">
+                  template from <a href="https://github.com/jonbarron/jonbarron_website">jonbarron</a>
+                </p>
               </td>
             </tr>
-            <tr>
-              <td class="all">
-                <br>
-                <a href="https://pulkitag.github.io/rlbootcamp-iap/" target="_blank">6.S090 Deep Learning for Control</a>, MIT
-                <span style="float: right;">Spring 2021</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="all">
-                <br>
-                <a href="https://www.nvidia.com/zh-tw/deep-learning-ai/education/" target="_blank">Deep Learning Institute</a>, NVIDIA Taiwan
-                <span style="float: right;">Spring 2018</span>
-              </td>
-            </tr>
-        </tbody></table>
-        <br><br> -->
-
-       
-      <br><br>
-
-        <!--boreder-->
-        <table><tbody>
-          <tr>
-            <td style="padding: 0px">
-              <br>
-              <p style="text-align: center;">
-                template from <a href="https://jonbarron.info" target="_blank">jonbarron</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-
-      </td>
-    </tr>
-  </table>
-</body>
-
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
